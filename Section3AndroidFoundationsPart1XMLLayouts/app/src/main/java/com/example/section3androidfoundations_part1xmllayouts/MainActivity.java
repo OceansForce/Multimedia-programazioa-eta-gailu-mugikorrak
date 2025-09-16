@@ -13,6 +13,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView erantzuna;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         elementuak_aurkitu();
-
+        setButton_listener();
 
     }
 
@@ -69,5 +71,21 @@ public class MainActivity extends AppCompatActivity {
         double altura_a_metros=pulgadas_totales*0.0254;
 
         double bmi= peso/ (altura_a_metros*pulgadas_totales);
+
+        DecimalFormat nire_dicimalFormat= new DecimalFormat("0.00");
+        String bmi_formatu_String= nire_dicimalFormat.format(bmi);
+
+        String erantzunaString;
+        if (bmi < 18.5){
+
+            erantzunaString=bmi_formatu_String + " - Pesas poco";
+
+        }else if(bmi > 25){
+            erantzunaString=bmi_formatu_String + " - Tienes sobre peso";
+        }else {
+            erantzunaString=bmi_formatu_String + " - Tienes un peso saludable";
+        }
+
+        erantzuna.setText(erantzunaString);
     }
 }
