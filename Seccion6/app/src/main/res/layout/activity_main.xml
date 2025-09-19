@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="24dp"
@@ -60,7 +60,7 @@
             android:id="@+id/card_view_mains"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="760dp"
+            android:layout_marginTop="260dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/card_view_starters">
 
@@ -90,6 +90,7 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
 
 
     </RelativeLayout>

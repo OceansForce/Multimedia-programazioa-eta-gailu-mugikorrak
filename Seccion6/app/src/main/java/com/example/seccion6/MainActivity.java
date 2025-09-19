@@ -1,6 +1,8 @@
 package com.example.seccion6;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startersCard= findViewById(R.id.card_view_starters);
         mainsCard= findViewById(R.id.card_view_mains);
+
+        startersCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent start = new Intent(MainActivity.this, StarterActivity.class);
+
+                startActivity();
+            }
+        });
     }
 
 }
