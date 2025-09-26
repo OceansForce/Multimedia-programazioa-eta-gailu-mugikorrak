@@ -21,6 +21,17 @@
             android:text="The Hungry Developer"
             />
 
+        <TextView
+            android:padding="12dp"
+            android:fontFamily="sans-serif-black"
+            android:id="@+id/text_view_email_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jgarciama25paag@ikzubirimanteo.com"
+            android:layout_below="@id/text_view_restaurant_name"
+            android:layout_centerHorizontal="true"
+            />
+
         <androidx.cardview.widget.CardView
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -60,9 +71,43 @@
             android:id="@+id/card_view_mains"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="260dp"
+            android:layout_below="@+id/card_view_starters"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/card_view_starters">
+            android:layout_marginTop="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/main" />
+
+                <TextView
+                    android:id="@+id/text_view_mains"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Main Courses"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/desserts_view"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/card_view_mains">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -81,7 +126,7 @@
                     android:textSize="18sp"
                     android:fontFamily="sans-serif-black"
                     android:layout_gravity="center"
-                    android:id="@+id/text_view_mains"
+                    android:id="@+id/text_view_desserts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Main Courses"
@@ -90,8 +135,6 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-
 
     </RelativeLayout>
 

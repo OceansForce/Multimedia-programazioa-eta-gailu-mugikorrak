@@ -1,8 +1,10 @@
 package com.example.seccion6;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +34,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(start);
             }
         });
+
+        mainsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent start_main= new Intent(MainActivity.this, MainCoursesActivity.class);
+
+                startActivity(start_main);
+            }
+        });
+
+        TextView email_TextView= findViewById(R.id.text_view_email_address);
+        email_TextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent start_email= new Intent(Intent.ACTION_SENDTO);
+                start_email.setData(Uri.parse("mailto:jgarciama25paag@ikzubirimanteo.com"));
+                startActivity(start_email);
+
+            }
+        });
+
     }
 
 }
