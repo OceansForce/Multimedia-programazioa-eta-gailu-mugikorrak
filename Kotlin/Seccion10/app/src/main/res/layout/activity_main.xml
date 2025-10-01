@@ -19,6 +19,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textCapWords"
             tools:text="Nombre de ejemplo"
             android:id="@+id/editar_nombre_de_contacto"/>
 
@@ -35,7 +36,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:inputType="phone"
             tools:text="Numero de ejemplo"
             android:id="@+id/editar_numero_de_contacto"/>
 
@@ -51,6 +52,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textCapWords"
             tools:text="Nombre de ejemplo"
             android:id="@+id/editar_nombre_de_usuario"/>
 
@@ -79,13 +81,23 @@
             android:id="@+id/empezar_inmediatamente"
             android:text="Empezar inmediata mente"/>
 
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="Disponible a partir de la fecha"
-            android:id="@+id/apartir_de_la_fecha"
-            />
+            android:layout_marginTop="10dp"
+            android:hint="Disponible a partir de la fecha">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:text="dd/mm/aaaa"
+                android:id="@+id/apartir_de_la_fecha"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
